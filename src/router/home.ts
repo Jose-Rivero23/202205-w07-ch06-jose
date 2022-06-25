@@ -1,11 +1,14 @@
 import { Router } from 'express';
-import { ExtraRequest } from '../app';
+
+import { template } from '../controllers/mangosta.controller.js';
 
 const router = Router();
 
 router.get('/', (req, resp) => {
-    const calc = (req as ExtraRequest).calculo;
-    resp.end(`App Express - usuarios ${calc.toLocaleString()}`);
+    resp.setHeader('Content-type', 'text-html');
+    resp.end(`<h1>App Back-end(Express)/ Front (Angular)</h1>
+    <div>${template}</div>
+    `);
 });
 
 export default router;

@@ -2,7 +2,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Model } from 'mongoose';
 
-const template = `<div>
+export const template = `<div>
             <img
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
             alt="pikachu" width="79" height="78" class="imgr"
@@ -34,7 +34,7 @@ const template = `<div>
 export class MangostaController<T> {
     constructor(public model: Model<T>) {}
 
-    getAllcontroller = async (req: Request, resp: Response) => {
+    getAllController = async (req: Request, resp: Response) => {
         req;
         resp.setHeader('Content-type', 'text-html');
         resp.end(`<h1>ROBOTS LIST</h1>
