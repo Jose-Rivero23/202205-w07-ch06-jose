@@ -1,11 +1,9 @@
-import express, { NextFunction, Request, Response, Router } from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import router from './router/home.js';
-// import path from 'path'
+import { robotRouter } from './router/robots.js';
 export const app = express();
-
-// Middlewares
 
 app.use(morgan('dev'));
 app.use(express.json());
