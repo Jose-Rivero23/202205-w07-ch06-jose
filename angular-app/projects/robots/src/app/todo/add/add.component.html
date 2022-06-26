@@ -1,0 +1,19 @@
+<div>
+  <select name="responsible" id="" [(ngModel)]="task.responsible" required>
+    <option></option>
+
+    <option *ngFor="let item of users">
+      {{ item }}
+    </option>
+  </select>
+</div>
+<div>
+  <input
+    type="text"
+    name="title"
+    placeholder="Describa la tarea"
+    [(ngModel)]="task.title"
+  />
+</div>
+
+<button type="button" (click)="handleClick()">Añadir</button>

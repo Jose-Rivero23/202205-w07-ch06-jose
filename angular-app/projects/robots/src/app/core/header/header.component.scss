@@ -1,0 +1,16 @@
+p {
+  color: red;
+
+  background-color: black;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+img {
+  animation: 3s rotate linear infinite;
+}

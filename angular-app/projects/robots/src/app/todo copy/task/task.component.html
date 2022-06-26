@@ -1,0 +1,14 @@
+<p>
+  <span> {{ task.title }}</span>
+  <span> {{ task.responsible }}</span>
+  <span class="delete-button" (click)="deleteHandle()">🗑️</span>
+
+  <input
+    type="checkbox"
+    name="isCompleted"
+    [(ngModel)]="task.isCompleted"
+    (change)="changeHandle()"
+  />
+
+  <!-- Si quieres pasar el parametro del evento al click habria que poner deleteHandle($event) -->
+</p>
